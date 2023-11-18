@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Trabalho2</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="digite_sua_mensagem">Digite sua mensagem…</string>
+    <string name="enviar">Enviar</string>
+    <string name="voltar">Voltar</string>
+    <string name="placeholder_text">Placeholder Text</string>
+    <string name="resposta">Resposta</string>
+</resources>
