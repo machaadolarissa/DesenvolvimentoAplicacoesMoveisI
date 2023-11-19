@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/HomeScreen">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.machado.trabalho2.FirstFragment"
+        android:id="@+id/HomeScreen"
+        android:name="com.machado.trabalho2.HomeScreen"
         android:label=""
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/home_screen">
         <action
-            android:id="@+id/action_firstFragment_to_secondFragment"
+            android:id="@+id/action_homeScreen_to_secondFragment"
             app:destination="@id/SecondFragment" />
     </fragment>
 
@@ -25,8 +25,8 @@
             app:destination="@id/CommandHistoryFragment" />
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_SecondFragment_to_homeScreen"
+            app:destination="@id/HomeScreen" />
 
     </fragment>
 
@@ -42,8 +42,8 @@
         </action>
 
         <action
-            android:id="@+id/action_History_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_History_to_HomeScreen"
+            app:destination="@id/HomeScreen" />
     </fragment>
 
 </navigation>

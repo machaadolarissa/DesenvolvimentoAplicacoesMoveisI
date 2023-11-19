@@ -6,11 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.machado.trabalho2.databinding.FragmentFirstBinding
+import com.machado.trabalho2.databinding.HomeScreenBinding
 
-class FirstFragment : Fragment() {
+class HomeScreen : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: HomeScreenBinding? = null
 
     private val binding get() = _binding!!
 
@@ -19,7 +19,7 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = HomeScreenBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -30,7 +30,7 @@ class FirstFragment : Fragment() {
         binding.buttonSendMessage.setOnClickListener {
             val message = binding.editTextMessage.text.toString()
 
-            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment()
+            val action = HomeScreenDirections.actionHomeScreenToSecondFragment()
             val bundle = Bundle().apply {
                 putString("userMessage", message)
             }

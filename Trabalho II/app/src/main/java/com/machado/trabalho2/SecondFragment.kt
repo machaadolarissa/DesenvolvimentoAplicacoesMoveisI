@@ -34,7 +34,7 @@ class SecondFragment : Fragment() {
         binding.textViewResponse.text = robotResponse
 
         binding.buttonVoltar.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+            findNavController().navigate(R.id.action_SecondFragment_to_homeScreen)
         }
 
         binding.buttonViewHistory.setOnClickListener {

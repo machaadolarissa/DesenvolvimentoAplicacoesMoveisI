@@ -38,7 +38,7 @@ class CommandHistoryFragment : Fragment() {
         recyclerView.adapter = commandAdapter
 
         binding.buttonVoltar.setOnClickListener {
-            findNavController().navigate(R.id.action_History_to_FirstFragment)
+            findNavController().navigate(R.id.action_History_to_HomeScreen)
         }
     }
 
