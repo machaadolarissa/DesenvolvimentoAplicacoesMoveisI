@@ -3,13 +3,13 @@ package com.machado.trabalho2
 import MarcianoAcaoPersonalizada
 import MarcianoPremium
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.machado.trabalho2.databinding.FragmentSecondBinding
+
 
 class SecondFragment : Fragment() {
 
@@ -35,6 +35,10 @@ class SecondFragment : Fragment() {
 
         binding.buttonVoltar.setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+        }
+
+        binding.buttonViewHistory.setOnClickListener {
+            findNavController().navigate(R.id.action_SecondFragment_to_CommandHistoryFragment)
         }
     }
 

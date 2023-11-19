@@ -34,6 +34,9 @@ class FirstFragment : Fragment() {
             val bundle = Bundle().apply {
                 putString("userMessage", message)
             }
+            if (message.isNotEmpty()){
+                CommandHistoryFragment.addCommand(message)
+            }
             findNavController().navigate(action.actionId, bundle)
         }
     }

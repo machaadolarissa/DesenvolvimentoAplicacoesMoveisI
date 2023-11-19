@@ -5,7 +5,9 @@
 
     <string name="digite_sua_mensagem">Digite sua mensagem…</string>
     <string name="enviar">Enviar</string>
-    <string name="voltar">Voltar</string>
     <string name="placeholder_text">Placeholder Text</string>
     <string name="resposta">Resposta</string>
+    <string name="ver_hist_rico">Ver Histórico</string>
+    <string name="voltar">Voltar</string>
+    <string name="hist_rico_de_comandos">Histórico de Comandos</string>
 </resources>

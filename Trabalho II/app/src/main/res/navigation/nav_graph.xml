@@ -21,7 +21,24 @@
         tools:layout="@layout/fragment_second">
 
         <action
+            android:id="@+id/action_SecondFragment_to_CommandHistoryFragment"
+            app:destination="@id/CommandHistoryFragment" />
+
+        <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+
     </fragment>
+
+    <fragment
+        android:id="@+id/CommandHistoryFragment"
+        android:name="com.machado.trabalho2.CommandHistoryFragment"
+        android:label="Command History"
+        tools:layout="@layout/fragment_command_history">
+
+        <action
+            android:id="@+id/action_History_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
 </navigation>
