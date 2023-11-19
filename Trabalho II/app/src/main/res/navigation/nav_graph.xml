@@ -37,6 +37,11 @@
         tools:layout="@layout/fragment_command_history">
 
         <action
+            android:id="@+id/action_History_to_SecondFragment"
+            app:destination="@id/SecondFragment">
+        </action>
+
+        <action
             android:id="@+id/action_History_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>

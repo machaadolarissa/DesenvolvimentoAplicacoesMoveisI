@@ -33,7 +33,7 @@ class CommandHistoryFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         commandAdapter = CommandAdapter(getCommandList()) { command ->
-            sendMessageToRobot(command)
+            showResponseForCommand(command)
         }
         recyclerView.adapter = commandAdapter
 
@@ -42,15 +42,19 @@ class CommandHistoryFragment : Fragment() {
         }
     }
 
-    private fun sendMessageToRobot(message: String) {
-        val action = CommandHistoryFragmentDirections.actionHistoryToFirstFragment()
+    private fun showResponseForCommand(command: String) {
+        val action = CommandHistoryFragmentDirections.actionHistoryToSecondFragment()
         val bundle = Bundle().apply {
-            putString("userMessage", message)
+            putString("userMessage", command)
         }
-        if (message.isNotEmpty()){
-            addCommand(message)
-        }
+
+        getResponseForCommand(command)
         findNavController().navigate(action.actionId, bundle)
+    }
+
+
+    private fun getResponseForCommand(command: String): String {
+        return responseMap[command] ?: "Resposta não encontrada para o comando"
     }
 
     override fun onDestroyView() {
@@ -60,6 +64,7 @@ class CommandHistoryFragment : Fragment() {
 
     companion object {
         private val commandList = mutableListOf<String>()
+        private val responseMap = mutableMapOf<String, String>()
 
         fun addCommand(command: String) {
             commandList.add(command)

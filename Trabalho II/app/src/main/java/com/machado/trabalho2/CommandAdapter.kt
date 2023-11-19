@@ -26,6 +26,7 @@ class CommandAdapter(
         holder.commandText.text = command
 
         holder.itemView.setOnClickListener {
+            onItemClick(command)
         }
     }
 
