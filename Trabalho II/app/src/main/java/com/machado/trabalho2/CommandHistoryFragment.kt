@@ -43,7 +43,7 @@ class CommandHistoryFragment : Fragment() {
     }
 
     private fun showResponseForCommand(command: String) {
-        val action = CommandHistoryFragmentDirections.actionHistoryToSecondFragment()
+        val action = CommandHistoryFragmentDirections.actionHistoryToResponseScreen()
         val bundle = Bundle().apply {
             putString("userMessage", command)
         }

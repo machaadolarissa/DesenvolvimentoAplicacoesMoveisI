@@ -11,21 +11,21 @@
         android:label=""
         tools:layout="@layout/home_screen">
         <action
-            android:id="@+id/action_homeScreen_to_secondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_HomeScreen_to_ResponseScreen"
+            app:destination="@id/ResponseScreen" />
     </fragment>
 
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.machado.trabalho2.SecondFragment"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/ResponseScreen"
+        android:name="com.machado.trabalho2.ResponseScreen"
+        tools:layout="@layout/response_screen">
 
         <action
-            android:id="@+id/action_SecondFragment_to_CommandHistoryFragment"
+            android:id="@+id/action_ResponseScreen_to_CommandHistoryFragment"
             app:destination="@id/CommandHistoryFragment" />
 
         <action
-            android:id="@+id/action_SecondFragment_to_homeScreen"
+            android:id="@+id/action_ResponseScreen_to_homeScreen"
             app:destination="@id/HomeScreen" />
 
     </fragment>
@@ -37,8 +37,8 @@
         tools:layout="@layout/fragment_command_history">
 
         <action
-            android:id="@+id/action_History_to_SecondFragment"
-            app:destination="@id/SecondFragment">
+            android:id="@+id/action_History_to_ResponseScreen"
+            app:destination="@id/ResponseScreen">
         </action>
 
         <action

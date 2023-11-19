@@ -8,19 +8,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.machado.trabalho2.databinding.FragmentSecondBinding
+import com.machado.trabalho2.databinding.ResponseScreenBinding
 
 
-class SecondFragment : Fragment() {
+class ResponseScreen : Fragment() {
 
-    private var _binding: FragmentSecondBinding? = null
+    private var _binding: ResponseScreenBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        _binding = ResponseScreenBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -34,11 +34,11 @@ class SecondFragment : Fragment() {
         binding.textViewResponse.text = robotResponse
 
         binding.buttonVoltar.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_homeScreen)
+            findNavController().navigate(R.id.action_ResponseScreen_to_homeScreen)
         }
 
         binding.buttonViewHistory.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_CommandHistoryFragment)
+            findNavController().navigate(R.id.action_ResponseScreen_to_CommandHistoryFragment)
         }
     }
 

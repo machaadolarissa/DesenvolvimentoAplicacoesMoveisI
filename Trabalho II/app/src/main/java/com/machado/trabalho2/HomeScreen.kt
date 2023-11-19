@@ -30,7 +30,7 @@ class HomeScreen : Fragment() {
         binding.buttonSendMessage.setOnClickListener {
             val message = binding.editTextMessage.text.toString()
 
-            val action = HomeScreenDirections.actionHomeScreenToSecondFragment()
+            val action = HomeScreenDirections.actionHomeScreenToResponseScreen()
             val bundle = Bundle().apply {
                 putString("userMessage", message)
             }
