@@ -1,5 +1,5 @@
-open class MarcianoComOperacoes : Marciano() {
-    override fun responda(frase: String): String {
+open class MarcianoWithOperations : Marciano() {
+    override fun reply(frase: String): String {
         val regex = Regex("(some|subtraia|multiplique|divida) (\\d+) (\\d+)")
         val matchResult = regex.find(frase)
 
@@ -17,9 +17,9 @@ open class MarcianoComOperacoes : Marciano() {
                         "Essa eu sei. Resultado: ${"%.1f".format(resultado)}"
                     }
                 }
-                else -> responda(frase)
+                else -> reply(frase)
             }
         }
-        return super.responda(frase)
+        return super.reply(frase)
     }
 }

@@ -21,8 +21,8 @@
         tools:layout="@layout/response_screen">
 
         <action
-            android:id="@+id/action_ResponseScreen_to_CommandHistoryFragment"
-            app:destination="@id/CommandHistoryFragment" />
+            android:id="@+id/action_ResponseScreen_to_CommandHistoryScreen"
+            app:destination="@id/CommandHistoryScreen" />
 
         <action
             android:id="@+id/action_ResponseScreen_to_homeScreen"
@@ -31,10 +31,10 @@
     </fragment>
 
     <fragment
-        android:id="@+id/CommandHistoryFragment"
-        android:name="com.machado.trabalho2.CommandHistoryFragment"
+        android:id="@+id/CommandHistoryScreen"
+        android:name="com.machado.trabalho2.CommandHistoryScreen"
         android:label="Command History"
-        tools:layout="@layout/fragment_command_history">
+        tools:layout="@layout/command_history_screen">
 
         <action
             android:id="@+id/action_History_to_ResponseScreen"

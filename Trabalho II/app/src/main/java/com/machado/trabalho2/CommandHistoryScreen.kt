@@ -8,11 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.machado.trabalho2.databinding.FragmentCommandHistoryBinding
+import com.machado.trabalho2.databinding.CommandHistoryScreenBinding
 
-class CommandHistoryFragment : Fragment() {
+class CommandHistoryScreen : Fragment() {
 
-    private var _binding: FragmentCommandHistoryBinding? = null
+    private var _binding: CommandHistoryScreenBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var recyclerView: RecyclerView
@@ -22,7 +22,7 @@ class CommandHistoryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentCommandHistoryBinding.inflate(inflater, container, false)
+        _binding = CommandHistoryScreenBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -43,7 +43,7 @@ class CommandHistoryFragment : Fragment() {
     }
 
     private fun showResponseForCommand(command: String) {
-        val action = CommandHistoryFragmentDirections.actionHistoryToResponseScreen()
+        val action = CommandHistoryScreenDirections.actionHistoryToResponseScreen()
         val bundle = Bundle().apply {
             putString("userMessage", command)
         }
@@ -54,7 +54,7 @@ class CommandHistoryFragment : Fragment() {
 
 
     private fun getResponseForCommand(command: String): String {
-        return responseMap[command] ?: "Resposta não encontrada para o comando"
+        return responseMap[command] ?: "Response Not Found"
     }
 
     override fun onDestroyView() {

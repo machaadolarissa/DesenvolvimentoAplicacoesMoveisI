@@ -35,7 +35,7 @@ class HomeScreen : Fragment() {
                 putString("userMessage", message)
             }
             if (message.isNotEmpty()){
-                CommandHistoryFragment.addCommand(message)
+                CommandHistoryScreen.addCommand(message)
             }
             findNavController().navigate(action.actionId, bundle)
         }

@@ -1,6 +1,6 @@
 package com.machado.trabalho2
 
-import MarcianoAcaoPersonalizada
+import MarcianoCustomActions
 import MarcianoPremium
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -38,7 +38,7 @@ class ResponseScreen : Fragment() {
         }
 
         binding.buttonViewHistory.setOnClickListener {
-            findNavController().navigate(R.id.action_ResponseScreen_to_CommandHistoryFragment)
+            findNavController().navigate(R.id.action_ResponseScreen_to_CommandHistoryScreen)
         }
     }
 
@@ -50,8 +50,8 @@ class ResponseScreen : Fragment() {
 
     private fun getRobotResponse(message: String): String {
         val acoesPersonalizadas = mapOf(
-            "agir contar" to object : MarcianoAcaoPersonalizada {
-                override fun executar(): String {
+            "agir contar" to object : MarcianoCustomActions {
+                override fun execute(): String {
                     val contador = StringBuilder("Conto até 10: ")
                     for (i in 1..10) {
                         contador.append(i)
@@ -62,13 +62,13 @@ class ResponseScreen : Fragment() {
                     return contador.toString()
                 }
             },
-            "agir alfabeto" to object : MarcianoAcaoPersonalizada {
-                override fun executar(): String {
+            "agir alfabeto" to object : MarcianoCustomActions {
+                override fun execute(): String {
                     return "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
                 }
             },
-            "agir fato" to object : MarcianoAcaoPersonalizada {
-                override fun executar(): String {
+            "agir fato" to object : MarcianoCustomActions {
+                override fun execute(): String {
                     return "Aqui está um fato interessante do Kotlin: Kotlin é uma linguagem de programação oficialmente " +
                             "suportada para o desenvolvimento Android."
                 }
@@ -76,6 +76,6 @@ class ResponseScreen : Fragment() {
         )
 
         val robopremium = MarcianoPremium(acoesPersonalizadas)
-        return robopremium.responda(message)
+        return robopremium.reply(message)
     }
 }

@@ -1,5 +1,5 @@
 open class Marciano {
-    open fun responda(frase: String): String {
+    open fun reply(frase: String): String {
         val regexMaiusculas = Regex("[A-Z]")
         return if (frase.isEmpty()) {
             "Não me incomode"
